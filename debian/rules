@@ -1,4 +1,11 @@
 #!/usr/bin/make -f
 
+# h2 tests need grpc/protobuf
+export DH_GOLANG_EXCLUDES := cmd h2/grpc h2/testing h2/testservice
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_auto_test:
+	# Test fails if there's http_proxy, for example Ubuntu's autopkgtest infrastructure.
+	http_proxy="" dh_auto_test

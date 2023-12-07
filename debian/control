@@ -1,15 +1,34 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-google-martian
+Section: golang
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Stephen Gelman <ssgelm@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+               golang-golang-x-net-dev,
+               media-types,
+Standards-Version: 4.6.2
+Homepage: https://github.com/google/martian
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-google-martian
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-google-martian.git
+XS-Go-Import-Path: github.com/google/martian
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-go
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-google-martian-dev
+Architecture: all
+Depends: ${misc:Depends},
+         golang-golang-x-net-dev,
+         media-types,
+Multi-Arch: foreign
+Description: Martian is a library for building custom HTTP/S proxies
+ Martian Proxy is a programmable HTTP proxy designed to be used for testing.
+ .
+ Martian is a great tool to use if you want to:
+  * Verify that all (or some subset) of requests are secure
+  * Mock external services at the network layer
+  * Inject headers, modify cookies or perform other mutations of HTTP requests
+    and responses
+  * Verify that pingbacks happen when you think they should
+  * Unwrap encrypted traffic (requires install of CA certificate in browser)
