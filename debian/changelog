@@ -1,5 +1,63 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-google-martian (3.3.2-3) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
+  * Unset http_proxy before running tests (LP: #1942639)
+    Merge patch from golang-github-google-martian/
+    2.1.0+git20181219.d0b5ad3-3ubuntu1
+  * Update Standards-Version to 4.6.2 (no changes)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 09 Nov 2023 15:39:05 +0800
+
+golang-github-google-martian (3.3.2-2) unstable; urgency=medium
+
+  * Team upload
+  * Replace mime-support in -dev as well
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 06 Nov 2022 16:04:13 +0800
+
+golang-github-google-martian (3.3.2-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+
+  [ Charles Plessy ]
+  * Replace transition package `mime-support` with `media-types`
+    (Closes: #1010325)
+
+  [ Shengjing Zhu ]
+  * New upstream version 3.3.2
+  * Drop patch which is fixed in new version
+  * Update Section to golang
+  * Update Standards-Version to 4.6.1 (no changes)
+  * Add Rules-Requires-Root
+  * Bump debhelper-compat to 13
+  * Remove unused Files-Excluded
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 06 Nov 2022 15:28:37 +0800
+
+golang-github-google-martian (2.1.0+git20181219.d0b5ad3-3) unstable; urgency=medium
+
+  * Skip flaky test (Closes: #923819)
+
+ -- Stephen Gelman <ssgelm@debian.org>  Sat, 23 Mar 2019 13:05:23 -0500
+
+golang-github-google-martian (2.1.0+git20181219.d0b5ad3-2) unstable; urgency=medium
+
+  * Add missing dependency on mime-types (Closes: #921169)
+
+ -- Stephen Gelman <ssgelm@debian.org>  Sun, 03 Feb 2019 20:17:19 -0600
+
+golang-github-google-martian (2.1.0+git20181219.d0b5ad3-1) unstable; urgency=medium
+
+  * Initial release (Closes: #920784)
+
+ -- Stephen Gelman <ssgelm@debian.org>  Mon, 21 Jan 2019 12:53:21 -0600
